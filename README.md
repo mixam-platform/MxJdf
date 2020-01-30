@@ -50,13 +50,18 @@ The top level of the MxJdf document contains the following elements:
   "export": {...}
 }
 ```
+| Property  | Description | Values |
+|---|---|---|
+| version   | Current version of the protocol. (String)  | Currently ‘3.08’  |
+|   |   |   |
+|   |   |   |
 
-Property
-Description
-Values
-version
-Current version of the protocol. (String)
-Currently ‘3.08’
+
+
+
+
+
+
 desc
 Document description. (String)
 Always "mixam.job.description"
@@ -456,7 +461,7 @@ spineWidth
 (Double precision number)
 In shops units (mm in the UK, inch in the US)
 
-#Element: details
+# Element: details
 ```javascript
  "details": {
    "additionalProjectName": "370260/1",
@@ -482,7 +487,7 @@ The total number of copies (Integer)
 
 
 
-#Element: shipment
+# Element: shipment
 ```javascript
 "shipment": {
    "deliveryItems": [...],
@@ -512,7 +517,7 @@ units
 The units in which the weight is specified. KILOGRAM on metric system, LIBRA on imperial.
 KILOGRAM(0),
 LIBRA(1),
-#Element: RecipientAddress
+# Element: RecipientAddress
 ```javascript
 {
   "address": {...},
@@ -536,7 +541,7 @@ Epoch date of delivery (when the boxes are due to arrive at the customer address
 A Unix Timestamp
 
 
-#Element: address
+# Element: address
 ```javascript
 "address": {
       "salutation": "Mr.",
@@ -553,7 +558,7 @@ A Unix Timestamp
 ```
 See type ‘Address’
 
-#Element: senderForLabel (Address)
+# Element: senderForLabel (Address)
 ```javascript
 "senderForLabel": {
     "salutation": "Mr.",
@@ -575,7 +580,7 @@ See type ‘Address’
 
  
 
-#Type: Address
+# Type: Address
 ```javascript
 {
     "salutation": "Mr.",
@@ -660,7 +665,7 @@ FARM(6),
 
 
  
-#Element: delivery
+# Element: delivery
 ```javascript
 "delivery": {
     "type": "parcel",
@@ -705,7 +710,7 @@ Points to a page where collection can be summoned and shipment labels printed. (
 
 
 
-#Element: File
+# Element: File
 ```javascript
  {
       "type": 0,
