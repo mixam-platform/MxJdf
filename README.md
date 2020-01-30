@@ -10,6 +10,7 @@ The format is made of attributes and values and can be implemented in XML and JS
 Mixam offers the protocol as a JSON document or an XML document. 
 
 The document can be attached to an email message or posted to the printer preferred end-point.
+
 Table of content
 The top level	3
 Element: job	5
@@ -33,9 +34,9 @@ Element: export	20
 JSON Example	21
 XML Example	23
 
-The top level
+# The top level
 The top level of the MxJdf document contains the following elements:
-
+```javascript
 {
   "version": 3.08,
   "desc": "mixam.job.description",
@@ -48,8 +49,7 @@ The top level of the MxJdf document contains the following elements:
   "files": [...],
   "export": {...}
 }
-
-
+```
 
 Property
 Description
@@ -91,13 +91,14 @@ A map of properties describing the export value of the goods. (Map)
 Applicable only when goods are shipped overseas. See bellow.
 
 
-Element: job
+# Element: job
+```javascript
 "job": {
     "article": {...},
     "details": {...},
     "shipment": {...}
 }
-
+```
 article
 The article describes the print requirements (map)
 See bellow
@@ -109,14 +110,15 @@ Contains addresses and delivery details
 See bellow
 
 
-Element: article
+# Element: article
+```javascript
 "article": {
   "components": [...],
   "type": 0,
   "product": 1,
   "subProduct": 100001
  }
-
+````
 components
 A list of components (such as text, cover, dust jacket etc.) (List<component>)
 See bellow
@@ -157,7 +159,8 @@ PRODUCT_MANGA(100013);
 
 
 
-Element: component
+# Element: component
+```javascript
 {
   "pages": 4,
   "chromaticity": {...},
@@ -166,7 +169,7 @@ Element: component
   "processing": {...},
   "type": 2
 }
- 
+```` 
 
 pages
 Number of pages in the component (Integer number)
@@ -194,11 +197,12 @@ ENVELOPE (5)
 
 
 Element: chromaticity
+```javascript
 {
   "front": 3,
   "back": 3
 }
-
+````
 front
 Colour space on front / outside. (ColorType)
 INVALID (0),
@@ -244,7 +248,8 @@ INCH(1),
 
 
 
-Element: material
+# Element: material
+```javascript
 "material" : {
     "glossiness" : 1,
     “weight" : 170,
@@ -252,7 +257,7 @@ Element: material
     "type" : 4,
     "refinings": [{...}, {...}]
 }
-
+````
 glossiness
 Paper glossiness (MaterialGlossinessType)
 NONE(0),
@@ -280,13 +285,14 @@ See below
 
 
 
-Element: refining
+# Element: refining
+```javascript
 "refining": {
   "effect": 2,
   "side": 1,
   "type": 3
 }
-
+````
 effect
 (RefiningEffect)
 NONE (0),
@@ -317,7 +323,8 @@ ULTRA_VIOLET_3D_SPOT_COATING(10)
 
 
 
-Element: processing
+# Element: processing
+```javascript
 "processing": {
     "binding": {...},
     "creasing": 0,
@@ -327,7 +334,7 @@ Element: processing
     "window": 0,
     "feature": 0
 }
-
+```
 binding
 Binding element (map)
 See below
@@ -406,7 +413,8 @@ PERFORATED_LEFT(4),
 PEEL_AND_SEAL(5)
 
 
-Element: binding
+# Element: binding
+```javascript
 {
    "type": 2,
    "color": 0,
@@ -414,7 +422,7 @@ Element: binding
    "endPaperColor": 0,
    "spineWidth": 7.5,
 }
-
+```
 
 type
 (BindingType)
@@ -448,14 +456,15 @@ spineWidth
 (Double precision number)
 In shops units (mm in the UK, inch in the US)
 
-Element: details
+#Element: details
+```javascript
  "details": {
    "additionalProjectName": "370260/1",
    "completionType": 3,
    "totalCirculation": 400,
    "dispatchDate": 1579177108174
  }
-
+```
 additionalProjectName
 Order number. Reference number. (String)
 
@@ -473,7 +482,8 @@ The total number of copies (Integer)
 
 
 
-Element: shipment
+#Element: shipment
+```javascript
 "shipment": {
    "deliveryItems": [...],
    "senderForLabel": {...},
@@ -481,7 +491,7 @@ Element: shipment
    "weight": 1.2
    "units": 1
 }
-
+```
 deliveryItems
 A list of RecipientAddress elements.
 (List<RecipientAddress>)
@@ -502,14 +512,15 @@ units
 The units in which the weight is specified. KILOGRAM on metric system, LIBRA on imperial.
 KILOGRAM(0),
 LIBRA(1),
-Element: RecipientAddress
+#Element: RecipientAddress
+```javascript
 {
   "address": {...},
   "circulation:  100,
   "dispatchDate": 1579693407751,
   "deliveryDate": 1579695818930
 }
-
+```
 address
 Address of recipient (Address)
 See bellow
@@ -525,7 +536,8 @@ Epoch date of delivery (when the boxes are due to arrive at the customer address
 A Unix Timestamp
 
 
-Element: address
+#Element: address
+```javascript
 "address": {
       "salutation": "Mr.",
       "firstName": "Rab",
@@ -538,10 +550,11 @@ Element: address
       "telephoneNumber": "07585055748",
       "email": "machinemagazine@mail.com"
 }
-
+```
 See type ‘Address’
 
-Element: senderForLabel (Address)
+#Element: senderForLabel (Address)
+```javascript
 "senderForLabel": {
     "salutation": "Mr.",
     "companyName": "Mixam Print",
@@ -556,13 +569,14 @@ Element: senderForLabel (Address)
     "telephoneNumber": "01923 594 040",
     "email": "info@mixam.co.uk"
 }
-
+```
 See type ‘Address’
 
 
  
 
-Type: Address
+#Type: Address
+```javascript
 {
     "salutation": "Mr.",
     "companyName": "Mixam Print",
@@ -578,7 +592,7 @@ Type: Address
     "locationType": 0,
     "email": "info@mixam.co.uk"
 }
-
+```
 salutation
 (SalutationType)
 MX("Mx."),
@@ -646,8 +660,8 @@ FARM(6),
 
 
  
-Element: delivery
-
+#Element: delivery
+```javascript
 "delivery": {
     "type": "parcel",
     "carrier": "UPS",
@@ -657,7 +671,7 @@ Element: delivery
     "cost": 6.50
     "url": "https://mixam.co.uk/spedition/5e2842bc4ed2f62bd2375020"
   }
-
+```
 
 type
 (DeliveryType)
@@ -691,8 +705,8 @@ Points to a page where collection can be summoned and shipment labels printed. (
 
 
 
-Element: File
-
+#Element: File
+```javascript
  {
       "type": 0,
       "name": "job372825.pdf",
@@ -700,7 +714,7 @@ Element: File
       "checksum": "90be4101398f7f9bc95abe8b1d0f7447",
       "sizeInBytes": 1865517
 }
-
+```
 type
 Which component is associated with this file. (FileType)
 ALL(0),
@@ -744,7 +758,8 @@ Currency code  of the above value.
 GBP, USD, CAD, AUD
 
 
-JSON Example
+#JSON Example
+```javascript
 {
   "version": "3.08",
   "desc": "mixam.job.description",
@@ -853,8 +868,9 @@ JSON Example
   "price": 143.85000610351562,
   "currencyCode": "GBP"
 }
-
-XML Example
+```
+#XML Example
+```xml
 <MxJdf>
     <version>3.08</version>
     <desc>mixam.job.description</desc>
@@ -963,4 +979,5 @@ XML Example
     <price>143.85000610351562</price>
     <currencyCode>GBP</currencyCode>
 </MxJdf>
+```
 
