@@ -58,47 +58,10 @@ The top level of the MxJdf document contains the following elements:
 |author|The name of the person who created the document. (String)|   |
 |referencedJobNumber|The associated order’s id in the Mixam system. (String)|   |
 |price|The pre-agreed cost price of the job (Double precision number)|   |
-|   |   |   |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-currencyCode
-The currency in which the price is specified. (String)
-“GBP”, “USD”, “CAD”, “AUD”
-job
-A map of properties describing the job.
-See bellow
-files
-A list of artwork files associated with the job. (List<File>)
-See bellow
-export
-A map of properties describing the export value of the goods. (Map)
-Applicable only when goods are shipped overseas. See bellow.
-
+|currencyCode|The currency in which the price is specified. (String)|“GBP”, “USD”, “CAD”, “AUD”|
+|job|A map of properties describing the job.|See bellow|
+|files|A list of artwork files associated with the job. (List<File>)|See bellow|
+|export|A map of properties describing the export value of the goods. (Map). Applicable only when goods are shipped overseas.| See bellow.|
 
 # Element: job
 ```javascript
