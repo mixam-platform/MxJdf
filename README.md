@@ -12,29 +12,31 @@ Mixam offers the protocol as a JSON document or an XML document.
 The document can be attached to an email message or posted to the printer preferred end-point.
 
 Table of content
-The top level	3
-Element: job	5
-Element: article	6
-Element: component	7
-Element: chromaticity	8
-Element: format	8
-Element: material	9
-Element: refining	10
-Element: processing	11
-Element: binding	13
-Element: details	14
-Element: shipment	14
-Element: RecipientAddress	15
-Element: address	16
-Element: senderForLabel (Address)	16
-Type: Address	17
-Element: delivery	18
-Element: File	20
-Element: export	20
-JSON Example	21
-XML Example	23
-
-# The top level
+|Chapter|Number|
+|---|--:|
+|The top level|1|
+|Element: job|2|
+|Element: article|3|
+|Element: component|4| 
+|Element: chromaticity|5| 
+|Element: format|6| 
+|Element: material|7| 
+|Element: refining|8| 
+|Element: processing|9| 
+|Element: binding|10| 
+|Element: details|11| 
+|Element: shipment|12| 
+|Element: RecipientAddress|13| 
+|Element: address|14| 
+|Element: senderForLabel (Address)|15| 
+|Type: Address|16| 
+|Element: delivery|17| 
+|Element: File|18| 
+|Element: export|19| 
+|JSON Example|20| 
+|XML Example|21| 
+ 
+# 1. The top level
 The top level of the MxJdf document contains the following elements:
 ```javascript
 {
@@ -63,7 +65,7 @@ The top level of the MxJdf document contains the following elements:
 |files|A list of artwork files associated with the job. (List<File>)|See bellow|
 |export|A map of properties describing the export value of the goods. (Map). Applicable only when goods are shipped overseas.| See bellow.|
 
-# Element: job
+# 2. Element: job
 ```javascript
 "job": {
     "article": {...},
@@ -82,7 +84,7 @@ Contains addresses and delivery details
 See bellow
 
 
-# Element: article
+# 3. Element: article
 ```javascript
 "article": {
   "components": [...],
@@ -131,7 +133,7 @@ PRODUCT_MANGA(100013);
 
 
 
-# Element: component
+# 4. Element: component
 ```javascript
 {
   "pages": 4,
@@ -168,13 +170,13 @@ BOOKMARK(4),
 ENVELOPE (5)
 
 
-Element: chromaticity
+# 5. Element: chromaticity
 ```javascript
 {
   "front": 3,
   "back": 3
 }
-````
+```
 front
 Colour space on front / outside. (ColorType)
 INVALID (0),
@@ -190,14 +192,15 @@ HKS (1),
 BLACK (2),
 PROCESS (3);
 
-Element: format
+# 6. Element: format
+```javascript
  "format" : {
     "longEdge" : 210,
     "orientation" : 1,
     "shortEdge" : 99,
     "units": 0
 }
-
+```
 longEdge
 Component long axis. (Double precision number) in shop’s units 
 
@@ -220,7 +223,7 @@ INCH(1),
 
 
 
-# Element: material
+# 7. Element: material
 ```javascript
 "material" : {
     "glossiness" : 1,
@@ -257,7 +260,7 @@ See below
 
 
 
-# Element: refining
+# 8. Element: refining
 ```javascript
 "refining": {
   "effect": 2,
@@ -295,7 +298,7 @@ ULTRA_VIOLET_3D_SPOT_COATING(10)
 
 
 
-# Element: processing
+# 9. Element: processing
 ```javascript
 "processing": {
     "binding": {...},
@@ -385,7 +388,7 @@ PERFORATED_LEFT(4),
 PEEL_AND_SEAL(5)
 
 
-# Element: binding
+# 10. Element: binding
 ```javascript
 {
    "type": 2,
@@ -428,7 +431,7 @@ spineWidth
 (Double precision number)
 In shops units (mm in the UK, inch in the US)
 
-# Element: details
+# 11. Element: details
 ```javascript
  "details": {
    "additionalProjectName": "370260/1",
@@ -454,7 +457,7 @@ The total number of copies (Integer)
 
 
 
-# Element: shipment
+# 12. Element: shipment
 ```javascript
 "shipment": {
    "deliveryItems": [...],
@@ -484,7 +487,7 @@ units
 The units in which the weight is specified. KILOGRAM on metric system, LIBRA on imperial.
 KILOGRAM(0),
 LIBRA(1),
-# Element: RecipientAddress
+# 13. Element: RecipientAddress
 ```javascript
 {
   "address": {...},
@@ -508,7 +511,7 @@ Epoch date of delivery (when the boxes are due to arrive at the customer address
 A Unix Timestamp
 
 
-# Element: address
+# 14. Element: address
 ```javascript
 "address": {
       "salutation": "Mr.",
@@ -525,7 +528,7 @@ A Unix Timestamp
 ```
 See type ‘Address’
 
-# Element: senderForLabel (Address)
+# 15. Element: senderForLabel (Address)
 ```javascript
 "senderForLabel": {
     "salutation": "Mr.",
@@ -547,7 +550,7 @@ See type ‘Address’
 
  
 
-# Type: Address
+# 16. Type: Address
 ```javascript
 {
     "salutation": "Mr.",
@@ -632,7 +635,7 @@ FARM(6),
 
 
  
-# Element: delivery
+# 17. Element: delivery
 ```javascript
 "delivery": {
     "type": "parcel",
@@ -677,7 +680,7 @@ Points to a page where collection can be summoned and shipment labels printed. (
 
 
 
-# Element: File
+# 18. Element: File
 ```javascript
  {
       "type": 0,
@@ -712,14 +715,14 @@ Size of file (Long number)
 
 
 
-Element: export
+# 19. Element: export
 Optional, applicable only when goods are shipped overseas.
- 
+ ```javascript
 "export": {
     "customsValueSum": 100,
     "customsValueCurrency": "USD"
 }
-
+```
 customsValueSum
 Value of the goods for custom evaluation.
 (Integer number)
@@ -730,7 +733,7 @@ Currency code  of the above value.
 GBP, USD, CAD, AUD
 
 
-#JSON Example
+# 20. JSON Example
 ```javascript
 {
   "version": "3.08",
@@ -841,7 +844,7 @@ GBP, USD, CAD, AUD
   "currencyCode": "GBP"
 }
 ```
-#XML Example
+# 21. XML Example
 ```xml
 <MxJdf>
     <version>3.08</version>
