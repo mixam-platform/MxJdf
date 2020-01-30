@@ -53,6 +53,7 @@ The top level of the MxJdf document contains the following elements:
   "export": {...}
 }
 ```
+
 | Property  | Description | Values |
 |---|---|---|
 |version| Current version of the protocol. (String)  | Currently ‘3.08’|
@@ -74,15 +75,11 @@ The top level of the MxJdf document contains the following elements:
     "shipment": {...}
 }
 ```
-article
-The article describes the print requirements (map)
-See bellow
-details
-Contains some meta data regarding the number of copies, tax and alternative id. (map)
-See bellow
-shipment
-Contains addresses and delivery details
-See bellow
+| Property  | Description | Values |
+|---|---|---|
+|article|The article describes the print requirements (map)|See bellow|
+|details|Contains some meta data regarding the number of copies, tax and alternative id. (map)|See bellow|
+|shipment|Contains addresses and delivery details|See bellow|
 
 
 # 3. Element: article
