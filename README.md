@@ -1,9 +1,5 @@
-
- 
-
-
-Mixam Job Description Format
-API & SDK for ordering a print job
+# Mixam Job Description Format
+## API & SDK for ordering a print job
 
 The Mixam Job Description Format is a definition of a structure describing a print job in an unambiguous way.
 
