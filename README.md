@@ -52,9 +52,13 @@ The top level of the MxJdf document contains the following elements:
 ```
 | Property  | Description | Values |
 |---|---|---|
-| version   | Current version of the protocol. (String)  | Currently ‘3.08’  |
+|version| Current version of the protocol. (String)  | Currently ‘3.08’|
+|desc|Document description. (String)|Always "mixam.job.description"|
+|dateCreated|Epoch date of creation. (Long number)|A Unix Timestamp of the date the document was created|
+|author|The name of the person who created the document. (String)|   |
+|referencedJobNumber|The associated order’s id in the Mixam system. (String)|   |
+|price|The pre-agreed cost price of the job (Double precision number)|   |
 |   |   |   |
-|   |   |   |
 
 
 
@@ -62,24 +66,24 @@ The top level of the MxJdf document contains the following elements:
 
 
 
-desc
-Document description. (String)
-Always "mixam.job.description"
-dateCreated
-Epoch date of creation. (Long number)
-A Unix Timestamp of the date the document was created
 
 
-author
-The name of the person who created the document. (String)
 
 
-referencedJobNumber
-The associated order’s id in the Mixam system. (String)
 
 
-price
-The pre-agreed cost price of the job (Double precision number)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 currencyCode
