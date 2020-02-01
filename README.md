@@ -91,45 +91,12 @@ The top level of the MxJdf document contains the following elements:
   "subProduct": 100001
  }
 ````
-components
-A list of components (such as text, cover, dust jacket etc.) (List<component>)
-See bellow
-type
-Taxation type (VAT, GST etc.) (ArticleTaxType)
-EXEMPT(0),
-VAT(1),
-GST(2),
-USA_TAX(3);
-
-
-product
-The product id (ProductGroupType)
-INVALID(0),
-PRODUCT_BRUCHURES(1),
-PRODUCT_FLYERS(2),
-PRODUCT_FOLDED(3),
-PRODUCT_POSTERS(4),   PRODUCT_LETTERHEADS(5),
-PRODUCT_PHOTOBOOK(6),
-PRODUCT_BOOK(7),  PRODUCT_BUSINESS_CARD(8),
-PRODUCT_POSTCARD(9),  PRODUCT_GREETING_CARD(10)
-PRODUCT_NOTEPAD(11),    PRODUCT_COMPLIMENT_SLIPS(12),    PRODUCT_ENVELOPES(13),
-PRODUCT_FOLDERS(14),
-PRODUCT_LAYFLAT(15),
-PRODUCT_WALL_CALENDARS(16),    PRODUCT_DESK_CALENDARS(17),    PRODUCT_VR_WALL_CALENDARS(18) PRODUCT_VR_DESK_CALENDARS(19)  PRODUCT_TRADITIONAL_BOOK(20);
-
-
-subProduct
-Fine classification of the product. (optional) (SubProductType)
-PRODUCT_HARD_COVER_BOOKS(100001)
-PRODUCT_PAPERBACK_BOOKS(100002)
-PRODUCT_PERFECT_BOOKLETS(100003)
-PRODUCT_WIRO_BOOKLETS(100004)   PRODUCT_LOOP_BOOKLETS(100005)  PRODUCT_STAPLED_BOOKLETS(100006) PRODUCT_MAGAZINES(100007),
-PRODUCT_CATALOGS(100008),
-PRODUCT_BOOKLETS(100009),
-PRODUCT_ZINES(100010),    PRODUCT_COMIC_BOOKS(100011),   PRODUCT_ART_PRINTS(100012),
-PRODUCT_MANGA(100013);
-
-
+| Property  | Description | Values |
+|---|---|---|
+|components|A list of components (such as text, cover, dust jacket etc.) (List<component>)|See bellow|
+|type|Taxation type (VAT, GST etc.) (ArticleTaxType)|EXEMPT(0),<br> VAT(1),<br> GST(2),<br> USA_TAX(3);|
+|product|The product id (ProductGroupType)|INVALID(0),<br>PRODUCT_BRUCHURES(1),<br>PRODUCT_FLYERS(2),<br>PRODUCT_FOLDED(3),<br>PRODUCT_POSTERS(4),<br>   PRODUCT_LETTERHEADS(5),<br>PRODUCT_PHOTOBOOK(6),<br>PRODUCT_BOOK(7),<br>  PRODUCT_BUSINESS_CARD(8),<br>PRODUCT_POSTCARD(9),<br>PRODUCT_GREETING_CARD(10)<br>PRODUCT_NOTEPAD(11),<br> PRODUCT_COMPLIMENT_SLIPS(12),<br>PRODUCT_ENVELOPES(13),<br>PRODUCT_FOLDERS(14),<br>PRODUCT_LAYFLAT(15),<br>PRODUCT_WALL_CALENDARS(16),<br>    PRODUCT_VR_WALL_CALENDARS(18)<br> PRODUCT_VR_DESK_CALENDARS(19),<br>  PRODUCT_TRADITIONAL_BOOK(20);|
+|subProduct|Fine classification of the product. (optional) (SubProductType)|PRODUCT_HARD_COVER_BOOKS(100001)<br>PRODUCT_PAPERBACK_BOOKS(100002)<br>PRODUCT_PERFECT_BOOKLETS(100003)<br>PRODUCT_WIRO_BOOKLETS(100004)<br>PRODUCT_LOOP_BOOKLETS(100005)<br> PRODUCT_STAPLED_BOOKLETS(100006) PRODUCT_MAGAZINES(100007),<br>PRODUCT_CATALOGS(100008),<br>PRODUCT_BOOKLETS(100009),<br>PRODUCT_ZINES(100010), <br>PRODUCT_COMIC_BOOKS(100011),<br> PRODUCT_ART_PRINTS(100012),<br>PRODUCT_MANGA(100013);|
 
 # 4. Element: component
 ```javascript
@@ -143,30 +110,14 @@ PRODUCT_MANGA(100013);
 }
 ```` 
 
-pages
-Number of pages in the component (Integer number)
-4, 8, 32, to name a few
-chromaticity
-Chromaticity element which specify the colour space on the front and back
-See below
-format
-Format element which specify the component measurements
-See below
-material
-Material element which specify the component paper stock.
-See below
-processing
-Processing element which specify additional processing such as binding
-See below
-type
-ComponentType
-INVALID(0),
-CONTENT(1),
-COVER(2),
-JACKET(3),
-BOOKMARK(4),
-ENVELOPE (5)
-
+| Property  | Description | Values |
+|---|---|---|
+|pages|Number of pages in the component (Integer number)|4, 8, 32, to name a few|
+|chromaticity|Chromaticity element which specify the colour space on the front and back|See below|
+|format|Format element which specify the component measurements|See below|
+|material|Material element which specify the component paper stock.|See below|
+|processing|Processing element which specify additional processing such as binding.|See below|
+|type|ComponentType|INVALID(0),<br>CONTENT(1),<br>COVER(2),<br>JACKET(3),<br>BOOKMARK(4),<br>ENVELOPE (5)|
 
 # 5. Element: chromaticity
 ```javascript
@@ -175,20 +126,11 @@ ENVELOPE (5)
   "back": 3
 }
 ```
-front
-Colour space on front / outside. (ColorType)
-INVALID (0),
-HKS (1),
-BLACK (2),
-PROCESS (3);
 
-
-back
-Colour space on back / inside. (ColorType)
-INVALID (0),
-HKS (1),
-BLACK (2),
-PROCESS (3);
+| Property  | Description | Values |
+|---|---|---|
+|front|Colour space on front / outside. (ColorType)|INVALID (0),<br>HKS (1),<br>BLACK (2),<br>PROCESS (3);|
+|back|Colour space on back / inside. (ColorType)|INVALID (0),<br>HKS (1),<br>BLACK (2),<br>PROCESS (3);|
 
 # 6. Element: format
 ```javascript
@@ -199,28 +141,14 @@ PROCESS (3);
     "units": 0
 }
 ```
-longEdge
-Component long axis. (Double precision number) in shop’s units 
 
-
-shortEdge
-Component short axis. (Double precision number) in shop’s units 
-
-
-orientation
-(OrientationType)
-PORTRAIT(0),
-LANDSCAPE(1);
-
-
-units
-The units in which the edges are specified. mm on metric system, inch on imperial.
-MM (0),
-INCH(1),
-
-
-
-
+| Property  | Description | Values |
+|---|---|---|
+|longEdge|Component long axis. (Double precision number) in shop’s units||
+|shortEdge|Component short axis. (Double precision number) in shop’s units ||
+|orientation|(OrientationType)|PORTRAIT(0),<br>LANDSCAPE(1);|
+|units|The units in which the edges are specified. mm on metric system, inch on imperial.|MM (0),<br>INCH(1),|
+ 
 # 7. Element: material
 ```javascript
 "material" : {
@@ -231,32 +159,14 @@ INCH(1),
     "refinings": [{...}, {...}]
 }
 ````
-glossiness
-Paper glossiness (MaterialGlossinessType)
-NONE(0),
-MATT(1),
-GLOSS(2),
 
-
-weight
-The weight on one unit (Integer number)
-
-
-units
-Units of weight (PaperWeightUnit)
-INVALID(0),
-GSM(1),    LIBRA_COVER(2),    LIBRA_TEXT(3),    LIBRA_CARD(4),
-type
-(MaterialType)
-INVALID(0)
-SILK(1)
-GLOSS(2)    UNCOATED(3)    AFFICHE_PAPER(4)    OUTDOOR_PAPER(5)    ILLUSTRATION_PRINTING_PAPER(6)  PHOTOGRAPHIC_PRINTING_PAPER(7)  POSTCARD_BOARD(8)    NATURAL_PAPER(9)  RECYCLED_PAPER(10)
-refinings
-List of refining of material such as lamination coating and UV coating.
-(MaterialRefining)
-See below
-
-
+| Property  | Description | Values |
+|---|---|---|
+|glossiness|Paper glossiness (MaterialGlossinessType)|NONE(0),<br>MATT(1),<br>GLOSS(2),|
+|weight|The weight on one unit (Integer number)||
+|units|Units of weight (PaperWeightUnit)|INVALID(0),<br>GSM(1),<br>LIBRA_COVER(2),<br> LIBRA_TEXT(3),<br> LIBRA_CARD(4),|
+|type|(MaterialType)|INVALID(0)<br>SILK(1)<br>GLOSS(2)<br>UNCOATED(3)<br>AFFICHE_PAPER(4)<br>OUTDOOR_PAPER(5)<br>ILLUSTRATION_PRINTING_PAPER(6)<br>PHOTOGRAPHIC_PRINTING_PAPER(7)<br>POSTCARD_BOARD(8)<br>NATURAL_PAPER(9)<br>RECYCLED_PAPER(10)|
+|refinings|List of refining of material such as lamination coating and UV coating. (MaterialRefining)|See below|
 
 # 8. Element: refining
 ```javascript
@@ -266,35 +176,12 @@ See below
   "type": 3
 }
 ````
-effect
-(RefiningEffect)
-NONE (0),
-MATT_FINISH(1),
-GLOSS_FINISH (2),
-SILK_FINISH (3),
-SOFT_TOUCH (4),
-GOLD (5),
-SILVER (6),
-side
-(RefiningSideType)
-NONE(0),
-FRONT(1),
-BACK(2),
-FRONT_AND_BACK(3),
-OUTSIDE(4),
-INSIDE (5)
-OUTSIDE_AND_INSIDE(6)
-type
-(RefiningType)
-NONE (0)    ULTRA_VIOLET_COATING(1)
-LAMINATION (2),
-PROTECTIVE_FOIL (3)
-METAL_FOIL (4)    SOFT_PVC_FILM_LAMINATION (5)   ULTRA_VIOLET_SPOT_COATING (6)  
-DISPERSION_COATING (7)
-BIND_EMBOSSING ( 8)   RELIEF_SPOT_COATING (9)
-ULTRA_VIOLET_3D_SPOT_COATING(10)
 
-
+| Property  | Description | Values |
+|---|---|---|
+|effect|(RefiningEffect)|NONE (0),<br>MATT_FINISH(1),<br>GLOSS_FINISH (2),<br>SILK_FINISH (3),<br>SOFT_TOUCH (4),<br>GOLD (5),<br>SILVER (6),|
+|side|(RefiningSideType)|NONE(0),<br>FRONT(1),<br>BACK(2),<br>FRONT_AND_BACK(3),<br>OUTSIDE(4),<br>INSIDE (5)<br>OUTSIDE_AND_INSIDE(6)|
+|type|(RefiningType)|NONE (0) <br>ULTRA_VIOLET_COATING(1) <br>LAMINATION (2), <br>PROTECTIVE_FOIL (3) <br>METAL_FOIL (4) <br>SOFT_PVC_FILM_LAMINATION (5) <br>ULTRA_VIOLET_SPOT_COATING (6) <br>DISPERSION_COATING (7) <br>BIND_EMBOSSING (8) <br>RELIEF_SPOT_COATING (9) <br>ULTRA_VIOLET_3D_SPOT_COATING(10)|
 
 # 9. Element: processing
 ```javascript
@@ -308,83 +195,16 @@ ULTRA_VIOLET_3D_SPOT_COATING(10)
     "feature": 0
 }
 ```
-binding
-Binding element (map)
-See below
-creasing
-(CreasingType)
-NONE(0),    CREASING_NECESSARY(1)
 
-
-folding
-(FoldingType)
-FLAT (0),
-HALF  (1),
-LETTER  (2),
-Z  (3),
-GATE_OPEN (4),
-GATE_CLOSED (5),
-CROSS (6),
-DOUBLE_PARALLEL (7)
-headTailBand
-Ratchford (BandType)
-NONE(0),
-BLACK_AND_WHITE_69WS(1),
-WHITE_T117(2),
-GREEN_AND_BIEGE_72WS(3),
-DARK_BLUE_AND_WHITE_64WS(4),
-RED_T105(5),
-MAROON_AND_WHITE_66WS(6),
-BROWN_AND_BIEGE_58WS(7),
-RED_AND_WHITE_56WS(8),
-MEDIUM_GREY_T109(9),
-YELLOW_T122(10),
-BLACK_T108(11),
-LIGHT_BLUE_AND_WHITE_634WS(12),
-YELLOW_AND_DARK_BLUE_59WS(13),
-RED_AND_GREY_55WS(14),
-RED_AND_YELLOW_65WS(15),
-NAVY_T118(16),
-GREEN_AND_BLACK_52WS(17),
-PURPLE_AND_WHITE_54WS(18),
-BLACK_AND_DARK_GREEN_71WS(19),
-GREEN_AND_RED_61WS(20),
-RED_AND_BLACK_53WS(21),
-YELLOW_AND_BROWN_57WS(22),
-YELLOW_AND_BLACK_67WS(23),
-GREEN_AND_WHITE_68WS(24),
-GREEN_AND_YELLOW_62WS(25),
-NAVY_AND_GOLD(26),
-ribbon
-Ratchford  (RibbonType)
-NONE(0),
-MAROON(1),
-BLACK(2),
-DARK_GREEN(3),
-BRIGHT_RED(4),
-IVORY(5),
-WHITE(6),
-GOLD(7),
-PURPLE(8),
-ORANGE(9),
-PINK(10),
-GREY(11),
-BABY_BLUE(12),
-BLUE(13),
-window
-Envelope window (WindowType)
-NONE(0),
-LEFT(1),
-RIGHT(2)
-feature
-(FeatureType)
-INVALID(0),
-SUPPLY_FOLDED(1),
-SUPPLY_NOT_FOLDED(2),
-PERFORATED_ON_TOP(3),
-PERFORATED_LEFT(4),
-PEEL_AND_SEAL(5)
-
+| Property  | Description | Values |
+|---|---|---|
+|binding|Binding element (map)|See below|
+|creasing|(CreasingType)|NONE(0),<br>>CREASING_NECESSARY(1)|
+|folding|(FoldingType)|FLAT (0), <br>HALF  (1), <br>LETTER  (2), <br>Z  (3), <br>GATE_OPEN (4), <br>GATE_CLOSED (5), <br>CROSS (6), <br>DOUBLE_PARALLEL (7)|
+|headTailBand|Ratchford (BandType)|NONE(0), <br>BLACK_AND_WHITE_69WS(1), <br>WHITE_T117(2), <br>GREEN_AND_BIEGE_72WS(3), <br>DARK_BLUE_AND_WHITE_64WS(4), <br>RED_T105(5), <br>MAROON_AND_WHITE_66WS(6), <br>BROWN_AND_BIEGE_58WS(7), <br>RED_AND_WHITE_56WS(8), <br>MEDIUM_GREY_T109(9), <br>YELLOW_T122(10), <br>BLACK_T108(11), <br>LIGHT_BLUE_AND_WHITE_634WS(12), <br>YELLOW_AND_DARK_BLUE_59WS(13), <br>RED_AND_GREY_55WS(14), <br>RED_AND_YELLOW_65WS(15), <br>NAVY_T118(16), <br>GREEN_AND_BLACK_52WS(17), <br>PURPLE_AND_WHITE_54WS(18), <br>BLACK_AND_DARK_GREEN_71WS(19), <br>GREEN_AND_RED_61WS(20), <br>RED_AND_BLACK_53WS(21), <br>YELLOW_AND_BROWN_57WS(22), <br>YELLOW_AND_BLACK_67WS(23), <br>GREEN_AND_WHITE_68WS(24), <br>GREEN_AND_YELLOW_62WS(25), <br>NAVY_AND_GOLD(26),|
+|ribbon|Ratchford  (RibbonType)|NONE(0), <br>MAROON(1), <br>BLACK(2), <br>DARK_GREEN(3), <br>BRIGHT_RED(4), <br>IVORY(5), <br>WHITE(6), <br>GOLD(7), <br>PURPLE(8), <br>ORANGE(9), <br>PINK(10), <br>GREY(11), <br>BABY_BLUE(12), <br>BLUE(13),|
+|window|Envelope window (WindowType)|NONE(0), <br>LEFT(1), <br>RIGHT(2)|
+|feature|(FeatureType)|INVALID(0), <br>SUPPLY_FOLDED(1), <br>SUPPLY_NOT_FOLDED(2), <br>PERFORATED_ON_TOP(3), <br>PERFORATED_LEFT(4), <br>PEEL_AND_SEAL(5)|
 
 # 10. Element: binding
 ```javascript
@@ -396,38 +216,13 @@ PEEL_AND_SEAL(5)
    "spineWidth": 7.5,
 }
 ```
-
-type
-(BindingType)
-NONE(0),
-STAPLE_BINDING(1),
-PERFECT_BINDING(2),
-WIRO_BINDING(3),
-LOOP_BINDING(4),
-SEWING_BINDING(5),
-CALENDAR_BINDING (6)
-
-
-color
-Wiro spiral colour (BindingColorType)
-NONE (0),
-BLACK (1),
-SILVER (2),
-WHITE (3),
-loops
-How many loop holes. (LoopsType)
-NONE (0),
-TWO (1),
-FOUR (2),
-endPaperColor
-(EndPaperColorType)
-NONE(0),
-WHITE(1),
-BLACK(2);
-TBD...
-spineWidth
-(Double precision number)
-In shops units (mm in the UK, inch in the US)
+| Property  | Description | Values |
+|---|---|---|
+|type|(BindingType)|NONE(0), <br>STAPLE_BINDING(1), <br>PERFECT_BINDING(2), <br>WIRO_BINDING(3), <br>LOOP_BINDING(4), <br>SEWING_BINDING(5), <br>CALENDAR_BINDING (6)|
+|color|Wiro spiral colour (BindingColorType)|NONE (0), <br>BLACK (1), <br>SILVER (2), <br>WHITE (3),|
+|loops|How many loop holes. (LoopsType)|NONE (0), <br>TWO (1), <br>FOUR (2),|
+|endPaperColor|(EndPaperColorType)|NONE(0), <br>WHITE(1), <br>BLACK(2); <br>TBD...|
+|spineWidth|(Double precision number)|In shops units (mm in the UK, inch in the US)|
 
 # 11. Element: details
 ```javascript
@@ -438,22 +233,12 @@ In shops units (mm in the UK, inch in the US)
    "dispatchDate": 1579177108174
  }
 ```
-additionalProjectName
-Order number. Reference number. (String)
 
-
-completionType
-Urgency of the job. Default value is 4 (Standard)
-INVALID(0),
-SAME_DAY(1),
-EXPRESS(2),
-OVERNIGHT(3),
-STANDARD(4),
-SAVER(5);
-totalCirculation
-The total number of copies (Integer)
-
-
+| Property  | Description | Values |
+|---|---|---|
+|additionalProjectName|Order number. Reference number. (String)||
+|completionType|Urgency of the job. Default value is 4 (Standard)|INVALID(0), <br>SAME_DAY(1), <br>EXPRESS(2), <br>OVERNIGHT(3), <br>STANDARD(4), <br>SAVER(5);|
+|totalCirculation|The total number of copies (Integer)||
 
 # 12. Element: shipment
 ```javascript
@@ -465,26 +250,15 @@ The total number of copies (Integer)
    "units": 1
 }
 ```
-deliveryItems
-A list of RecipientAddress elements.
-(List<RecipientAddress>)
-See bellow
-senderForLabel
-The sender address. 
-(Address)
-See bellow
-delivery
-Delivery details.
-(Delivery)
-See bellow
-Weight
-The expected weight of the goods. (Double precision number)
 
+| Property  | Description | Values |
+|---|---|---|
+|deliveryItems|A list of RecipientAddress elements. (List<RecipientAddress>)|See bellow|
+|senderForLabel|The sender address. (Address)|See bellow|
+|delivery|Delivery details. (Delivery)|See bellow|
+|Weight|The expected weight of the goods. (Double precision number)||
+|units|The units in which the weight is specified. KILOGRAM on metric system, LIBRA on imperial.|KILOGRAM(0), <br>LIBRA(1),|
 
-units
-The units in which the weight is specified. KILOGRAM on metric system, LIBRA on imperial.
-KILOGRAM(0),
-LIBRA(1),
 # 13. Element: RecipientAddress
 ```javascript
 {
@@ -494,20 +268,13 @@ LIBRA(1),
   "deliveryDate": 1579695818930
 }
 ```
-address
-Address of recipient (Address)
-See bellow
-circulation
-How many copies to this specific address. (Integer number)
 
-
-dispatchDate
-Epoch date of dispatch (when the boxes are due to be collected by the carrier.) (Long number)
-A Unix Timestamp
-deliveryDate
-Epoch date of delivery (when the boxes are due to arrive at the customer address.) (Long number)
-A Unix Timestamp
-
+| Property  | Description | Values |
+|---|---|---|
+|address|Address of recipient (Address)|See bellow|
+|circulation|How many copies to this specific address. (Integer number)||
+|dispatchDate|Epoch date of dispatch (when the boxes are due to be collected by the carrier.) (Long number)|A Unix Timestamp|
+|deliveryDate|Epoch date of delivery (when the boxes are due to arrive at the customer address.) (Long number)|A Unix Timestamp|
 
 # 14. Element: address
 ```javascript
@@ -524,6 +291,7 @@ A Unix Timestamp
       "email": "machinemagazine@mail.com"
 }
 ```
+
 See type ‘Address’
 
 # 15. Element: senderForLabel (Address)
@@ -545,9 +313,6 @@ See type ‘Address’
 ```
 See type ‘Address’
 
-
- 
-
 # 16. Type: Address
 ```javascript
 {
@@ -566,72 +331,23 @@ See type ‘Address’
     "email": "info@mixam.co.uk"
 }
 ```
-salutation
-(SalutationType)
-MX("Mx."),
-MS("Ms."),
-MR("Mr."),
-DR("Dr."),
-MRS("Mrs"),
-PROF("Prof"),
-companyName
-(String)
 
-
-firstName
-(String)
-
-
-surName
-(String)
-
-
-street1
-(String)
-
-
-street2
-Optional (String) 
-
-
-street3
-Optional (String) 
-
-
-county
-Usually county name. State in the US. (String)
-
-
-postalCode
-Postcode in the UK, zip in US. (String)
-
-
-city
-(String)
-
-
-country
-(String)
-“GB”, “US”, “CA” or “AU”
-telephoneNumber
-(String)
-
-
-email
-(String)
-
-
-locationType
-(AddressLocationType)
-RESIDENTIAL(0),
-BUSINESS_DOCK(1),
-BUSINESS_NO_DOCK(2),
-LIMITED_ACCESS(3),
-TRADE_SHOW(4),
-CONSTRUCTION(5),
-FARM(6),
-
-
+| Property  | Description | Values |
+|---|---|---|
+|salutation|(SalutationType)|MX("Mx."), <br>MS("Ms."), <br>MR("Mr."), <br>DR("Dr."), <br>MRS("Mrs"), <br>PROF("Prof"),|
+|companyName|(String)||
+|firstName|(String)||
+|surName|(String)||
+|street1|(String)||
+|street2|Optional (String) ||
+|street3|Optional (String) ||
+|county|Usually county name. State in the US. (String)||
+|postalCode|Postcode in the UK, zip in US. (String)||
+|city|(String)||
+|country|(String)|“GB”, “US”, “CA” or “AU”|
+|telephoneNumber|(String)||
+|email|(String)||
+|locationType|(AddressLocationType)|RESIDENTIAL(0), <br>BUSINESS_DOCK(1), <br>BUSINESS_NO_DOCK(2), <br>LIMITED_ACCESS(3), <br>TRADE_SHOW(4), <br>CONSTRUCTION(5), <br>FARM(6),|
  
 # 17. Element: delivery
 ```javascript
@@ -646,37 +362,15 @@ FARM(6),
   }
 ```
 
-type
-(DeliveryType)
-PARCEL(0),
-PALLET(1),
-ENVELOPE(2);
-
-
-carrier
-The name of the carrier (String)
-DPD, 2MV, Mini Clipper etc.
-serviceType
-Usually Next day (in the UK) (String)
-
-
-serviceDescription
-(String)
-
-
-canonicalUri
-A unique identifier of the service (String)
-
-
-cost
-Cost of delivery (Double precision number)
-
-
-url
-Points to a page where collection can be summoned and shipment labels printed. (String)
-
-
-
+| Property  | Description | Values |
+|---|---|---|
+|type|(DeliveryType)|PARCEL(0), <br>PALLET(1), <br>ENVELOPE(2);|
+|carrier|The name of the carrier (String)|DPD, 2MV, Mini Clipper etc.|
+|serviceType|Usually Next day (in the UK) (String)||
+|serviceDescription|(String)||
+|canonicalUri|A unique identifier of the service (String)||
+|cost|Cost of delivery (Double precision number)||
+|url|Points to a page where collection can be summoned and shipment labels printed. (String)||
 
 # 18. Element: File
 ```javascript
@@ -688,30 +382,14 @@ Points to a page where collection can be summoned and shipment labels printed. (
       "sizeInBytes": 1865517
 }
 ```
-type
-Which component is associated with this file. (FileType)
-ALL(0),
-BODY(1),
-COVER(2),
-DUST_JACKET(3),
-HEAD_TO_HEAD(4)
-name
-Name of file (String)
 
-
-url
-Where to download this file (String)
-
-
-checksum
-MD5 checksum of this file
-(String)
-
-
-sizeInBytes
-Size of file (Long number)
-
-
+| Property  | Description | Values |
+|---|---|---|
+|type|Which component is associated with this file. (FileType)|ALL(0), <br>BODY(1), <br>COVER(2), <br>DUST_JACKET(3), <br>HEAD_TO_HEAD(4)|
+|name|Name of file (String)||
+|url|Where to download this file (String)||
+|checksum|MD5 checksum of this file. (String)||
+|sizeInBytes|Size of file (Long number)||
 
 # 19. Element: export
 Optional, applicable only when goods are shipped overseas.
@@ -721,17 +399,14 @@ Optional, applicable only when goods are shipped overseas.
     "customsValueCurrency": "USD"
 }
 ```
-customsValueSum
-Value of the goods for custom evaluation.
-(Integer number)
 
-
-customsValueCurrency
-Currency code  of the above value. 
-GBP, USD, CAD, AUD
-
+| Property  | Description | Values |
+|---|---|---|
+|customsValueSum|Value of the goods for custom evaluation. (Integer number)||
+|customsValueCurrency|Currency code  of the above value.|GBP, USD, CAD, AUD|
 
 # 20. JSON Example
+
 ```javascript
 {
   "version": "3.08",
@@ -842,7 +517,9 @@ GBP, USD, CAD, AUD
   "currencyCode": "GBP"
 }
 ```
+
 # 21. XML Example
+
 ```xml
 <MxJdf>
     <version>3.08</version>
