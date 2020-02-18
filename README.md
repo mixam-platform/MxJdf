@@ -218,7 +218,7 @@ The top level of the MxJdf document contains the following elements:
 ```
 | Property  | Description | Values |
 |---|---|---|
-|type|(BindingType)|NONE(0), <br>STAPLE_BINDING(1), <br>PERFECT_BINDING(2), <br>WIRO_BINDING(3), <br>LOOP_BINDING(4), <br>BOOK_BINDING(5), <br>, <br>SEWING_BINDING(6), <br>CALENDAR_BINDING (7)|
+|type|(BindingType)|NONE(0), <br>STAPLE_BINDING(1), <br>PERFECT_BINDING(2), <br>WIRO_BINDING(3), <br>LOOP_BINDING(4), <br>BOOK_BINDING(5), <br> SEWING_BINDING(6), <br>CALENDAR_BINDING (7)|
 |color|Wiro spiral colour (BindingColorType)|NONE (0), <br>BLACK (1), <br>SILVER (2), <br>WHITE (3),|
 |loops|How many loop holes. (LoopsType)|NONE (0), <br>TWO (1), <br>FOUR (2),|
 |endPaperColor|(EndPaperColorType)|NONE(0), <br>WHITE(1), <br>BLACK(2); <br>TBD...|
