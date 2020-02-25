@@ -17,6 +17,10 @@ public enum ComponentType {
         this.value = value;
     }
 
+    public static ComponentType fromValue(String v) {
+        return valueOf(v);
+    }
+
     @JsonValue
     public int getValue() {
         return value;
