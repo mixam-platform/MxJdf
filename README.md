@@ -41,7 +41,7 @@ The document can be attached to an email message or posted to the printer prefer
 The top level of the MxJdf document contains the following elements:
 ```javascript
 {
-  "version": 3.08,
+  "version": 3.08.04,
   "desc": "mixam.job.description",
   "dateCreated": 1579177108174,
   "author" : "Mary Ansell",
