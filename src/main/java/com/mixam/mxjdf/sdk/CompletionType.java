@@ -16,6 +16,10 @@ public enum CompletionType {
         this.value = value;
     }
 
+    public static CompletionType fromValue(String v) {
+        return valueOf(v);
+    }
+
     @JsonValue
     public int getValue() {
         return value;
