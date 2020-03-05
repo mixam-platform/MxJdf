@@ -631,3 +631,8 @@ Optional, applicable only when goods are shipped overseas.
 </MxJdf>
 ```
 
+## License
+The Mixam Job Description Format is an Open Source software released under the
+ [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html).
+ 
+
