@@ -52,12 +52,6 @@
                             <goal>jar</goal>
                         </goals>
                         <phase>package</phase>
-                        <configuration>
-                            <excludes>
-                                <exclude>com/sage/pay/**</exclude>
-                                <exclude>com/google/guava/**</exclude>
-                            </excludes>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
