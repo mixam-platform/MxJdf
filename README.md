@@ -412,7 +412,7 @@ Optional, applicable only when goods are shipped overseas.
   "version": "3.08",
   "desc": "mixam.job.description",
   "referencedJobNumber": "37663402",
-  "author": "Effie Nadiv",
+  "author": "Mary Ansell",
   "dateCreated": 1580388681718,
   "job": {
     "article": {
@@ -525,7 +525,7 @@ Optional, applicable only when goods are shipped overseas.
     <version>3.08</version>
     <desc>mixam.job.description</desc>
     <referencedJobNumber>37663402</referencedJobNumber>
-    <author>Effie Nadiv</author>
+    <author>Mary Ansell</author>
     <dateCreated>1580388597661</dateCreated>
     <job>
         <article>
