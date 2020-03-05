@@ -11,6 +11,8 @@ Mixam offers the protocol as a JSON document or an XML document.
 
 The document can be attached to an email message or posted to the printer preferred end-point.
 
+Current version is 3.08.04
+
 ## Table of content
 
 |Chapter|Number|
