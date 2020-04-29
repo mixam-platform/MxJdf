@@ -30,8 +30,17 @@ public enum SubProductType {
         return value;
     }
 
+    public static SubProductType forCode(int code) {
+        for (SubProductType element : values()) {
+            if (element.value == code) {
+                return element;
+            }
+        }
+        return null;
+    }
+
     @JsonCreator
     public static SubProductType forValue(String v) {
-        return SubProductType.valueOf(v);
+        return SubProductType.forCode(Integer.parseInt(v));
     }
 }
