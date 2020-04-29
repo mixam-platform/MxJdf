@@ -1,5 +1,6 @@
 package com.mixam.mxjdf.sdk;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum SubProductType {
@@ -29,4 +30,8 @@ public enum SubProductType {
         return value;
     }
 
+    @JsonCreator
+    public static SubProductType forValue(String v) {
+        return SubProductType.valueOf(v);
+    }
 }
