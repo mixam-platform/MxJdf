@@ -43,7 +43,7 @@ Current version is 3.08.05
 The top level of the MxJdf document contains the following elements:
 ```javascript
 {
-  "version": 3.08.04,
+  "version": 3.08.05,
   "desc": "mixam.job.description",
   "dateCreated": 1579177108174,
   "author" : "Mary Ansell",
@@ -411,7 +411,7 @@ Optional, applicable only when goods are shipped overseas.
 
 ```javascript
 {
-  "version": "3.08",
+  "version": "3.08.05",
   "desc": "mixam.job.description",
   "referencedJobNumber": "37663402",
   "author": "Mary Ansell",
@@ -524,7 +524,7 @@ Optional, applicable only when goods are shipped overseas.
 
 ```xml
 <MxJdf>
-    <version>3.08</version>
+    <version>3.08.05</version>
     <desc>mixam.job.description</desc>
     <referencedJobNumber>37663402</referencedJobNumber>
     <author>Mary Ansell</author>
