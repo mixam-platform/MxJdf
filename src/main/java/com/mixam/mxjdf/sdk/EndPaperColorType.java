@@ -67,7 +67,7 @@ public enum EndPaperColorType {
         this.value = value;
     }
 
-    public static EndPaperColorType fromValue(int value) {
+    public static EndPaperColorType forCode(int value) {
         for (EndPaperColorType en: EndPaperColorType.values()) {
             if (en.value == value) {
                 return en;
@@ -83,6 +83,6 @@ public enum EndPaperColorType {
 
     @JsonCreator
     public static EndPaperColorType forValue(String v) {
-        return EndPaperColorType.fromValue(Integer.parseInt(v));
+        return EndPaperColorType.forCode(Integer.parseInt(v));
     }
 }
