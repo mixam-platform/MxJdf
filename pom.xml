@@ -3,7 +3,7 @@
 
     <groupId>com.mixam</groupId>
     <artifactId>mxjdf</artifactId>
-    <version>3.08.07</version>
+    <version>3.08.05</version>
     <name>Mixam Job Description Format</name>
     <packaging>jar</packaging>
 
