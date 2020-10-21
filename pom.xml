@@ -4,10 +4,24 @@
 
     <groupId>com.mixam</groupId>
     <artifactId>mxjdf</artifactId>
-    <version>3.08.05</version>
+    <version>3.08.06-SNAPSHOT</version>
     <name>Mixam Job Description Format</name>
     <packaging>jar</packaging>
 
+    <scm>
+        <connection>scm:git:https://github.com/mixam-platform/MxJdf3.git</connection>
+        <developerConnection>scm:git:https://github.com/mixam-platform/MxJdf3.git</developerConnection>
+        <url>https://github.com/mixam-platform/MxJdf3.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/mixam-platform/packages</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <java-version>1.8</java-version>
@@ -56,6 +70,11 @@
                 </executions>
             </plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.0-M1</version>
+            </plugin>
         </plugins>
     </build>
 
