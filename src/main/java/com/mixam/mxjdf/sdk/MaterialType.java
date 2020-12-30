@@ -16,6 +16,7 @@ public enum MaterialType {
     RECYCLED_PAPER(10),
     FLUORESCENT(11),
     WEATHERPROOF_VINYL(12),
+    RECYCLED_SILK_PAPER(13),
     ;
 
     private final int value;
